@@ -50,6 +50,6 @@ defmodule FrescoWeb.Endpoint do
   plug(Plug.MethodOverride)
   plug(Plug.Head)
   plug(Plug.Session, @session_options)
-  plug(FrescoWeb.Plugs.Subdomain)
+  plug FrescoWeb.Plugs.Subdomain, %{subdomain_router: FrescoWeb.SubdomainRouter}
   plug(FrescoWeb.Router)
 end
