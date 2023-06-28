@@ -10,6 +10,9 @@ import Config
 config :fresco,
   ecto_repos: [Fresco.Repo]
 
+# implement multi-tenants with Triplex
+config :triplex, repo: Fresco.Repo, tenant_prefix: "fresco_"
+
 # Configures the endpoint
 config :fresco, FrescoWeb.Endpoint,
   url: [host: "fresco.com"],
