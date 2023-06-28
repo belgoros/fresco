@@ -12,7 +12,7 @@ config :fresco,
 
 # Configures the endpoint
 config :fresco, FrescoWeb.Endpoint,
-  url: [host: "localhost"],
+  url: [host: "fresco.com"],
   render_errors: [
     formats: [html: FrescoWeb.ErrorHTML, json: FrescoWeb.ErrorJSON],
     layout: false
