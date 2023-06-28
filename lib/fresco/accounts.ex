@@ -22,20 +22,20 @@ defmodule Fresco.Accounts do
   end
 
   @doc """
-  Gets a single account.
+  Gets a single account by name (aka tenant).
 
   Raises `Ecto.NoResultsError` if the Account does not exist.
 
   ## Examples
 
-      iex> get_account!(123)
+      iex> get_account!("green")
       %Account{}
 
-      iex> get_account!(456)
+      iex> get_account!("unknown")
       ** (Ecto.NoResultsError)
 
   """
-  def get_account!(id), do: Repo.get!(Account, id)
+  def get_account!(name), do: Repo.get_by!(Account, name: name)
 
   @doc """
   Creates a account.
